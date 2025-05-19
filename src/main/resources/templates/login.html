@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="/assets/css/login.css">
+</head>
+<body>
+<div style="width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center; gap: 4rem">
+    
+    <div class="login" style="">
+        <img src="/assets/img/chef01.jpg" alt="chef_cooking" style="flex-shrink: 1;">
+        <div style="" class="form">
+            <img src="/assets/img/EnCuisine_logoFinal.svg" alt="EnCuisine_logo" style="width: 30%;">
+            <form style="padding: 0;" th:action="@{/login}" method="post" class="form">
+                <h2 style="font-size: 2rem; text-align: center;" >Welcome back to En Cuisine</h2>
+                <p>Please, enter your credentials to login</p>
+                <div style="width: 100%;" class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" minlength="2" maxlength="50" id="name" name="username" required>
+                </div>
+                <div style="width: 100%; " class="form-group">
+                    <label for="pass">Password</label>
+                    <input type="password" minlength="8" id="pass" name="password" required>
+                </div>
+                <div th:if="${param.error}" class="" style="color: red">Invalid credentials, try again.</div>
+                
+                <button style="width: 100%; align-self: center;" type="submit">Login</button>
+
+                <p style="font-size: 0.9rem;">Don't have an account? <a th:href="@{/signup}" style="color: #098052">Sign Up</a></p>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

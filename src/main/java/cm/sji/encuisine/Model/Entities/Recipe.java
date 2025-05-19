@@ -8,13 +8,21 @@ import lombok.Data;
 @Data
 public class Recipe {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "title")
     private String title;
+
+    @Column(name = "instructions")
     private String instructions;
-    private String imageURL;
+
+    @Column(name = "cuisineType")
     private String typeOfCuisine;
+
+    @Column(name = "duration")
     private Double duration;
+
+    @Column(name = "difficulty")
     private String difficulty;
 }

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="/assets/css/login.css">
+</head>
+<body class="signup">
+<div style="width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center; gap: 4rem">
+    
+    <div class="login" style="">
+        <img src="/assets/img/chhhef.avif" alt="chef_salting_meat">
+        <div style="" class="form">
+            <img src="/assets/img/EnCuisine_logoFinal.svg"  alt="EnCuisine_logo" style="height: 20%; flex-shrink: 1;">
+            <form style="padding: 0;"  class="form" method="post" th:action="@{/signup/save}" th:object="${newUser}">
+                <h2 style="font-size: 2rem; text-align: center;">Welcome to En Cuisine</h2>
+                <p>Please fill in the following to create your account</p>
+                 <div style="width: 100%;" class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" minlength="2" maxlength="50" th:field="*{name}" required>
+                </div>
+                <div style="width: 100%;" class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" th:field="*{email}" required>
+                </div>
+                <div style="width: 100%; " class="form-group">
+                    <label for="pass">Password</label>
+                    <input type="password" name="pass" id="pass" minlength="8" th:field="*{password}" required>
+                </div>
+
+                <div th:text="${message}" style="color: red"></div>
+                
+                <button style="width: 100%; align-self: center;" type="submit">Sign Up</button>
+
+                <p style="font-size: 0.9rem;">Already have an account? <a th:href="@{/login}" style="color: #098052">Login</a></p>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

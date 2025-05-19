@@ -10,13 +10,16 @@ import lombok.Data;
 @DiscriminatorColumn(name = "type", discriminatorType = DiscriminatorType.STRING)
 public class Person {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "name", nullable = false, length = 50)
     private String name;
-    private String email;
-    private String password;
-    private String phone;
 
+    @Column(name = "email", nullable = false, unique = true)
+    private String email;
+
+    @Column(name = "password", nullable = false)
+    private String password;
 
 }
