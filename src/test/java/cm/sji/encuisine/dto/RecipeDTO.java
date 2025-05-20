@@ -1,73 +1,26 @@
-package cm.sji.encuisine.entities;
+package cm.sji.encuisine.dto;
 
-import jakarta.persistence.*;
-
-import java.io.Serializable;
-import java.util.HashSet;
+import java.util.List;
 import java.util.Objects;
-import java.util.Set;
 
 
-@Entity
-@Table(name = "recipe")
-public class Recipe implements Serializable {
+public class RecipeDTO {
 
-    private static final long serialVersionUID = 1L;
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(name = "name", nullable = false)
     private String name;
-
-    @Column(name = "cuisine")
     private String cuisine;
-
-    @Column(name = "prep_time")
-    private Integer prepTime;  // in minutes
-
-    @Column(name = "cook_time")
-    private Integer cookTime;  // in minutes
-
-    @Column(name = "servings")
+    private Integer prepTime;
+    private Integer cookTime;
     private Integer servings;
-
-    @Column(name = "instructions", columnDefinition = "TEXT")
     private String instructions;
-
-    @Column(name = "prep_type")
     private String prepType;
-
-    @Column(name = "rating")
     private Double rating;
+    private List<String> ingredients;
 
-    @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    @JoinTable(
-            name = "recipe_ingredient",
-            joinColumns = @JoinColumn(name = "recipe_id"),
-            inverseJoinColumns = @JoinColumn(name = "ingredient_id")
-    )
-    private Set<Ingredient> ingredients = new HashSet<>();
-
-    // Default constructor
-    public Recipe() {
+    public RecipeDTO() {
     }
 
-    // Constructor with fields
-    public Recipe(String name, String cuisine, Integer prepTime, Integer cookTime,
-                  Integer servings, String instructions, String prepType, Double rating) {
-        this.name = name;
-        this.cuisine = cuisine;
-        this.prepTime = prepTime;
-        this.cookTime = cookTime;
-        this.servings = servings;
-        this.instructions = instructions;
-        this.prepType = prepType;
-        this.rating = rating;
-    }
 
-    // Getters and setters
     public Long getId() {
         return id;
     }
@@ -140,49 +93,48 @@ public class Recipe implements Serializable {
         this.rating = rating;
     }
 
-    public Set<Ingredient> getIngredients() {
+    public List<String> getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(Set<Ingredient> ingredients) {
+    public void setIngredients(List<String> ingredients) {
         this.ingredients = ingredients;
-    }
-
-    // Helper methods for managing the bidirectional relationship
-    public void addIngredient(Ingredient ingredient) {
-        this.ingredients.add(ingredient);
-        ingredient.getRecipes().add(this);
-    }
-
-    public void removeIngredient(Ingredient ingredient) {
-        this.ingredients.remove(ingredient);
-        ingredient.getRecipes().remove(this);
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Recipe recipe = (Recipe) o;
-        return Objects.equals(id, recipe.id);
+        RecipeDTO recipeDTO = (RecipeDTO) o;
+        return Objects.equals(id, recipeDTO.id) &&
+                Objects.equals(name, recipeDTO.name) &&
+                Objects.equals(cuisine, recipeDTO.cuisine) &&
+                Objects.equals(prepTime, recipeDTO.prepTime) &&
+                Objects.equals(cookTime, recipeDTO.cookTime) &&
+                Objects.equals(servings, recipeDTO.servings) &&
+                Objects.equals(instructions, recipeDTO.instructions) &&
+                Objects.equals(prepType, recipeDTO.prepType) &&
+                Objects.equals(rating, recipeDTO.rating);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hash(id, name, cuisine, prepTime, cookTime, servings, instructions, prepType, rating);
     }
 
     @Override
     public String toString() {
-        return "Recipe{" +
+        return "RecipeDTO{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", cuisine='" + cuisine + '\'' +
                 ", prepTime=" + prepTime +
                 ", cookTime=" + cookTime +
                 ", servings=" + servings +
+                ", instructions='" + instructions + '\'' +
                 ", prepType='" + prepType + '\'' +
                 ", rating=" + rating +
+                ", ingredients=" + ingredients +
                 '}';
     }
 }

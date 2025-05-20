@@ -2,19 +2,17 @@ package cm.sji.encuisine.dto;
 
 import java.util.List;
 
+
 public class RecipeFilterDTO {
+
     private String cuisine;
-    private List<String> ingredients;
     private String prepType;
+    private List<String> ingredients;
+
 
     public RecipeFilterDTO() {
     }
 
-    public RecipeFilterDTO(String cuisine, List<String> ingredients, String prepType) {
-        this.cuisine = cuisine;
-        this.ingredients = ingredients;
-        this.prepType = prepType;
-    }
 
     public String getCuisine() {
         return cuisine;
@@ -22,6 +20,14 @@ public class RecipeFilterDTO {
 
     public void setCuisine(String cuisine) {
         this.cuisine = cuisine;
+    }
+
+    public String getPrepType() {
+        return prepType;
+    }
+
+    public void setPrepType(String prepType) {
+        this.prepType = prepType;
     }
 
     public List<String> getIngredients() {
@@ -32,11 +38,12 @@ public class RecipeFilterDTO {
         this.ingredients = ingredients;
     }
 
-    public String getPrepType() {
-        return prepType;
-    }
-
-    public void setPrepType(String prepType) {
-        this.prepType = prepType;
+    @Override
+    public String toString() {
+        return "RecipeFilterDTO{" +
+                "cuisine='" + cuisine + '\'' +
+                ", prepType='" + prepType + '\'' +
+                ", ingredients=" + ingredients +
+                '}';
     }
 }
