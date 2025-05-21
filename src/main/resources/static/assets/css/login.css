@@ -1,11 +1,11 @@
 @font-face {
     font-family: Poiret;
-    src: url("../fonts/Poiret_One/PoiretOne-Regular.ttf");
+    src: url("../fonts/PoiretOne-Regular.ttf");
 }
 
 @font-face {
     font-family: Montserrat;
-    src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+    src: url("../fonts/Montserrat-Regular.ttf");
 }
 
 *{
@@ -99,8 +99,6 @@ label{
         height:100%;
         border-top-left-radius: 12px;
         border-bottom-left-radius: 12px;
-
-
     }
 }
 
@@ -132,7 +130,4 @@ button{
         transition: all ease 1s 100ms;
     }
 }
-
-.form-group{
-   margin: 0.5rem 0;
-}
++

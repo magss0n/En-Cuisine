@@ -2,6 +2,8 @@ package cm.sji.encuisine.Controller.ViewController;
 
 import cm.sji.encuisine.Model.Entities.User;
 import cm.sji.encuisine.Model.Services.PersonService;
+import cm.sji.encuisine.config.CustomUserDetails;
+import cm.sji.encuisine.config.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -21,11 +23,13 @@ public class LoginController {
 
     private final AuthenticationManager authenticationManager;
     private final PersonService personService;
+    private CustomUserDetailsService customUserDetailsService;
 
     @Autowired
-    public LoginController(AuthenticationManager authenticationManager, PersonService personService) {
+    public LoginController(AuthenticationManager authenticationManager, PersonService personService, CustomUserDetailsService customUserDetailsService) {
         this.authenticationManager = authenticationManager;
         this.personService = personService;
+        this.customUserDetailsService = customUserDetailsService;
     }
 
     @GetMapping("/login")
@@ -60,19 +64,27 @@ public class LoginController {
     }
 
     private void authenticateUser(User user) {
-        UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(
-                user.getName(),
-                user.getPassword()
-        );
-        Authentication authentication = authenticationManager.authenticate(authToken);
-        SecurityContextHolder.getContext().setAuthentication(authentication);
-        System.out.println("Authenticated");
+//        UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(
+//                user.getName(),
+//                user.getPassword()
+//        );
+        CustomUserDetails userDetails = (CustomUserDetails) customUserDetailsService.loadUserByUsername(user.getName());
+        UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
+//        Authentication authentication = authenticationManager.authenticate(authToken);
+        SecurityContextHolder.getContext().setAuthentication(authenticationToken);
+//        System.out.println("Authenticated");
     }
 
     @GetMapping("/")
     public String home() {
-        return "home";
+        return "index";
     }
+
+    @GetMapping("/index")
+    public String index() {
+        return "index";
+    }
+
 //    @GetMapping("/home")
 //    public String homePage(Model model, Authentication authentication) {
 //        UserDetails userDetails = (UserDetails) authentication.getPrincipal();

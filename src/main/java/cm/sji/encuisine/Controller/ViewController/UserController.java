@@ -14,7 +14,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-@RequestMapping("/user")
 public class UserController {
 
     private final PersonService personService;
@@ -26,15 +25,18 @@ public class UserController {
         this.authenticationManager = authenticationManager;
     }
 
-
-
-    @GetMapping("/home")
+    @GetMapping("/main")
     public String home(Model model, Authentication authentication) {
+        System.out.println("Hello World");
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
         User user = (User) personService.findByName(userDetails.getUsername());
         model.addAttribute("user", user);
-        System.out.println("Hello World");
-        return "user/home";
+        return "main";
+    }
+
+    @GetMapping("/custom")
+    public String custom(Model model, Authentication authentication) {
+        return "custom";
     }
 
 
