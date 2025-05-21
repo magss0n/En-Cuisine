@@ -12,10 +12,10 @@
     <title>~En Cuisine~</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="icon" href="/assets/img/core-img/favicon.ico">
 
     <!-- Core Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 
 </head>
 
@@ -23,7 +23,7 @@
     <!-- Preloader -->
     <div id="preloader">
         <i class="circle-preloader"></i>
-        <img src="img/core-img/salad.png" alt="">
+        <img src="/assets/img/core-img/salad.png" alt="">
     </div>
 
     <!-- Search Wrapper -->
@@ -86,7 +86,7 @@
                     <nav class="classy-navbar justify-content-between" id="deliciousNav">
 
                         <!-- Logo -->
-                        <a class="nav-brand" href="index.html"><img src="img/core-img/logo.svg" alt=""></a>
+                        <a class="nav-brand" th:href="@{/index}"><img src="/assets/img/EnCuisine_logoFinal.svg" style="width: 100px" alt="En Cuisine Logo"></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -104,11 +104,11 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul >
-                                    <li style="justify-self: center; align-self: center;" class="active"><a href="index.html">Home</a></li>
+                                    <li style="justify-self: center; align-self: center;" class="active"><a th:href="@{/index}">Home</a></li>
                                     <li><a href="#">Register</a>
                                         <ul class="dropdown">
-                                            <li><a href="index.html">Login</a></li>
-                                            <li><a href="about.html">Sign Up</a></li>
+                                            <li><a th:href="@{/login}">Login</a></li>
+                                            <li><a th:href="@{/signup}">Sign Up</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -132,14 +132,14 @@
     <section class="hero-area">
         <div class="hero-slides owl-carousel">
             <!-- Single Hero Slide -->
-            <div class="single-hero-slide bg-img" style="background-image: url(img/bg-img/bg1.jpg);">
+            <div class="single-hero-slide bg-img" style="background-image: url('/assets/img/bg-img/bg1.jpg');">
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                             <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
                                 <h2 data-animation="fadeInUp" data-delay="300ms">Savor the Extraordinary</h2>
                                 <p data-animation="fadeInUp" data-delay="700ms">Discover recipes that transform everyday meals into culinary delights. From quick weeknight dinners to gourmet treats.</p>
-                                <a href="#" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">See Receipes</a>
+                                <a href="#" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">See Recipes</a>
                             </div>
                         </div>
                     </div>
@@ -147,7 +147,7 @@
             </div>
 
             <!-- Single Hero Slide -->
-            <div class="single-hero-slide bg-img" style="background-image: url(img/bg-img/bg6.jpg);">
+            <div class="single-hero-slide bg-img" style="background-image: url('/assets/img/bg-img/bg6.jpg');">
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
@@ -162,7 +162,7 @@
             </div>
 
             <!-- Single Hero Slide -->
-            <div class="single-hero-slide bg-img" style="background-image: url(img/bg-img/bg7.jpg);">
+            <div class="single-hero-slide bg-img" style="background-image: url('/assets/img/bg-img/bg7.jpg');">
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
                         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
@@ -194,7 +194,7 @@
                 <!-- Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-best-receipe-area mb-30">
-                        <img src="img/bg-img/r1.jpg" alt="">
+                        <img src="/assets/img/bg-img/r1.jpg" alt="">
                         <div class="receipe-content">
                             <a href="custom.html">
                                 <h5 style="font-size: 25px; font-weight: 900;">Sushi Easy Recipe</h5>
@@ -213,7 +213,7 @@
                 <!-- Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-best-receipe-area mb-30">
-                        <img src="img/bg-img/r2.jpg" alt="">
+                        <img src="/assets/img/bg-img/r2.jpg" alt="">
                         <div class="receipe-content">
                             <a href="custom.html">
                                 <h5 style="font-size: 25px; font-weight: 900;">Homemade Burger</h5>
@@ -232,7 +232,7 @@
                 <!-- Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-best-receipe-area mb-30">
-                        <img src="img/bg-img/r3.jpg" alt="">
+                        <img src="/assets/img/bg-img/r3.jpg" alt="">
                         <div class="receipe-content">
                             <a href="custom.html">
                                 <h5 style="font-size: 25px; font-weight: 900;">Vegan Smoothie</h5>
@@ -251,7 +251,7 @@
                 <!-- Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-best-receipe-area mb-30">
-                        <img src="img/bg-img/r4.jpg" alt="">
+                        <img src="/assets/img/bg-img/r4.jpg" alt="">
                         <div class="receipe-content">
                             <a href="custom.html">
                                 <h5 style="font-size: 25px; font-weight: 900;">Calabasa soup</h5>
@@ -270,7 +270,7 @@
                 <!-- Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-best-receipe-area mb-30">
-                        <img src="img/bg-img/r5.jpg" alt="">
+                        <img src="/assets/img/bg-img/r5.jpg" alt="">
                         <div class="receipe-content">
                             <a href="custom.html">
                                 <h5 style="font-size: 25px; font-weight: 900;">Homemade Breakfast</h5>
@@ -289,7 +289,7 @@
                 <!-- Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-best-receipe-area mb-30">
-                        <img src="img/bg-img/r6.jpg" alt="">
+                        <img src="/assets/img/bg-img/r6.jpg" alt="">
                         <div class="receipe-content">
                             <a href="custom.html">
                                 <h5 style="font-size: 25px; font-weight: 900;">Healthy Fruit Desert</h5>
@@ -310,7 +310,7 @@
     <!-- ##### Best Receipe Area End ##### -->
 
     <!-- ##### CTA Area Start ##### -->
-    <section class="cta-area bg-img bg-overlay" style="background-image: url(img/bg-img/bg4.jpg);">
+    <section class="cta-area bg-img bg-overlay" style="background-image: url(/assets/img/bg-img/bg4.jpg);">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
@@ -339,7 +339,7 @@
         <div class="insta-feeds d-flex flex-wrap">
             <!-- Single Insta Feeds -->
             <div class="single-insta-feeds">
-                <img src="img/bg-img/insta1.jpg" alt="">
+                <img src="/assets/img/bg-img/insta1.jpg" alt="">
                 <!-- Icon -->
                 <div class="insta-icon">
                     <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
@@ -348,7 +348,7 @@
 
             <!-- Single Insta Feeds -->
             <div class="single-insta-feeds">
-                <img src="img/bg-img/insta2.jpg" alt="">
+                <img src="/assets/img/bg-img/insta2.jpg" alt="">
                 <!-- Icon -->
                 <div class="insta-icon">
                     <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
@@ -357,7 +357,7 @@
 
             <!-- Single Insta Feeds -->
             <div class="single-insta-feeds">
-                <img src="img/bg-img/insta3.jpg" alt="">
+                <img src="/assets/img/bg-img/insta3.jpg" alt="">
                 <!-- Icon -->
                 <div class="insta-icon">
                     <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -366,7 +366,7 @@
 
             <!-- Single Insta Feeds -->
             <div class="single-insta-feeds">
-                <img src="img/bg-img/insta4.jpg" alt="">
+                <img src="/assets/img/bg-img/insta4.jpg" alt="">
                 <!-- Icon -->
                 <div class="insta-icon">
                     <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
@@ -375,7 +375,7 @@
 
             <!-- Single Insta Feeds -->
             <div class="single-insta-feeds">
-                <img src="img/bg-img/insta5.jpg" alt="">
+                <img src="/assets/img/bg-img/insta5.jpg" alt="">
                 <!-- Icon -->
                 <div class="insta-icon">
                     <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
@@ -384,7 +384,7 @@
 
             <!-- Single Insta Feeds -->
             <div class="single-insta-feeds">
-                <img src="img/bg-img/insta6.jpg" alt="">
+                <img src="/assets/img/bg-img/insta6.jpg" alt="">
                 <!-- Icon -->
                 <div class="insta-icon">
                     <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
@@ -393,7 +393,7 @@
 
             <!-- Single Insta Feeds -->
             <div class="single-insta-feeds">
-                <img src="img/bg-img/insta7.jpg" alt="">
+                <img src="/assets/img/bg-img/insta7.jpg" alt="">
                 <!-- Icon -->
                 <div class="insta-icon">
                     <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
@@ -410,7 +410,7 @@
                 <div class="col-12 h-100 d-flex flex-wrap align-items-center justify-content-between">
                     <!-- Footer Logo -->
                     <div class="footer-logo">
-                        <a href="index.html"><img src="img/core-img/logo.svg" alt=""></a>
+                        <a href="index.html"><img src="/assets/img/EnCuisine_logoFinal.svg" alt="En Cuisine Logo" style="width: 100px"></a>
                     </div>
                     <!-- Copywrite -->
                     <p>~En Cuisine~ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved </p>
@@ -422,15 +422,15 @@
 
     <!-- ##### All Javascript Files ##### -->
     <!-- jQuery-2.2.4 js -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="/assets/js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
-    <script src="js/bootstrap/popper.min.js"></script>
+    <script src="/assets/js/bootstrap/popper.min.js"></script>
     <!-- Bootstrap js -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="/assets/js/bootstrap/bootstrap.min.js"></script>
     <!-- All Plugins js -->
-    <script src="js/plugins/plugins.js"></script>
+    <script src="/assets/js/plugins/plugins.js"></script>
     <!-- Active js -->
-    <script src="js/active.js"></script>
+    <script src="/assets/js/active.js"></script>
 </body>
 
 </html>

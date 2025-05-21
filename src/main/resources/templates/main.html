@@ -11,10 +11,10 @@
     <!-- Title -->
     <title>~En Cuisine~</title>
     <!-- Favicon -->
-    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="icon" href="/assets/img/core-img/favicon.ico">
 
     <!-- Core Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <style>
         label{
             margin-top: 20px;
@@ -27,7 +27,7 @@
     <!-- Preloader -->
     <div id="preloader">
         <i class="circle-preloader"></i>
-        <img src="img/core-img/salad.png" alt="">
+        <img src="/assets/img/core-img/salad.png" alt="">
     </div>
 
     <!-- Search Wrapper -->
@@ -90,7 +90,7 @@
                     <nav class="classy-navbar justify-content-between" id="deliciousNav">
 
                         <!-- Logo -->
-                        <a class="nav-brand" href="main.html"><img src="#" alt=""></a>
+                        <a class="nav-brand" th:href="@{/main}"><img src="/assets/img/EnCuisine_logoFinal.svg" style="width: 100px" alt="En Cuisine logo"></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -109,7 +109,7 @@
                             <div class="classynav">
                                 <ul>
                                     <li class="active"><a href="#">Home</a></li>
-                                    <li><a href="custom.html">Custom</a></li>
+                                    <li><a th:href="@{/custom}">Custom</a></li>
                                     <li><a href="contact.html">Contact Us</a></li>
                                 </ul>
 
@@ -123,7 +123,6 @@
                                 <div class="search-btn">
                                     <i class="fa fa-search" aria-hidden="true"></i>
                                 </div>
-
                             </div>
                             <!-- Nav End -->
                         </div>
@@ -135,7 +134,7 @@
     <!-- ##### Header Area End ##### -->
 
     <!-- ##### Breadcumb Area Start ##### -->
-    <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/breadcumb4.jpg);">
+    <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(/assets/img/bg-img/breadcumb4.jpg);">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
@@ -163,9 +162,9 @@
                 <!-- Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-best-receipe-area mb-30">
-                        <img src="img/bg-img/r1.jpg" alt="">
+                        <img src="/assets/img/bg-img/r1.jpg" alt="">
                         <div class="receipe-content">
-                            <a href="custom.html">
+                            <a th:href="@{/custom}">
                                 <h5 style="font-size: 25px; font-weight: 900;">Sushi Easy Recipe</h5>
                             </a>
                             <div class="ratings">
@@ -182,9 +181,9 @@
                 <!-- Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-best-receipe-area mb-30">
-                        <img src="img/bg-img/r2.jpg" alt="">
+                        <img src="/assets/img/bg-img/r2.jpg" alt="">
                         <div class="receipe-content">
-                            <a href="custom.html">
+                            <a th:href="@{/custom}">
                                 <h5 style="font-size: 25px; font-weight: 900;">Homemade Burger</h5>
                             </a>
                             <div class="ratings">
@@ -201,9 +200,9 @@
                 <!-- Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-best-receipe-area mb-30">
-                        <img src="img/bg-img/r3.jpg" alt="">
+                        <img src="/assets/img/bg-img/r3.jpg" alt="">
                         <div class="receipe-content">
-                            <a href="custom.html">
+                            <a th:href="@{/custom}">
                                 <h5 style="font-size: 25px; font-weight: 900;">Vegan Smoothie</h5>
                             </a>
                             <div class="ratings">
@@ -220,9 +219,9 @@
                 <!-- Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-best-receipe-area mb-30">
-                        <img src="img/bg-img/r4.jpg" alt="">
+                        <img src="/assets/img/bg-img/r4.jpg" alt="">
                         <div class="receipe-content">
-                            <a href="custom.html">
+                            <a th:href="@{/custom}">
                                 <h5 style="font-size: 25px; font-weight: 900;">Calabasa soup</h5>
                             </a>
                             <div class="ratings">
@@ -239,7 +238,7 @@
                 <!-- Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-best-receipe-area mb-30">
-                        <img src="img/bg-img/r5.jpg" alt="">
+                        <img src="/assets/img/bg-img/r5.jpg" alt="">
                         <div class="receipe-content">
                             <a href="custom.html">
                                 <h5 style="font-size: 25px; font-weight: 900;">Homemade Breakfast</h5>
@@ -259,7 +258,7 @@
                 <!-- Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-best-receipe-area mb-30">
-                        <img src="img/bg-img/r6.jpg" alt="">
+                        <img src="/assets/img/bg-img/r6.jpg" alt="">
                         <div class="receipe-content">
                             <a href="custom.html">
                                 <h5 style="font-size: 25px; font-weight: 900;">Healthy Fruit Desert</h5>
@@ -339,7 +338,7 @@
         <div class="insta-feeds d-flex flex-wrap">
             <!-- Single Insta Feeds -->
             <div class="single-insta-feeds">
-                <img src="img/bg-img/insta1.jpg" alt="">
+                <img src="/assets/img/bg-img/insta1.jpg" alt="">
                 <!-- Icon -->
                 <div class="insta-icon">
                     <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
@@ -348,7 +347,7 @@
 
             <!-- Single Insta Feeds -->
             <div class="single-insta-feeds">
-                <img src="img/bg-img/insta2.jpg" alt="">
+                <img src="/assets/img/bg-img/insta2.jpg" alt="">
                 <!-- Icon -->
                 <div class="insta-icon">
                     <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
@@ -357,7 +356,7 @@
 
             <!-- Single Insta Feeds -->
             <div class="single-insta-feeds">
-                <img src="img/bg-img/insta3.jpg" alt="">
+                <img src="/assets/img/bg-img/insta3.jpg" alt="">
                 <!-- Icon -->
                 <div class="insta-icon">
                     <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -366,7 +365,7 @@
 
             <!-- Single Insta Feeds -->
             <div class="single-insta-feeds">
-                <img src="img/bg-img/insta4.jpg" alt="">
+                <img src="/assets/img/bg-img/insta4.jpg" alt="">
                 <!-- Icon -->
                 <div class="insta-icon">
                     <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
@@ -375,7 +374,7 @@
 
             <!-- Single Insta Feeds -->
             <div class="single-insta-feeds">
-                <img src="img/bg-img/insta5.jpg" alt="">
+                <img src="/assets/img/bg-img/insta5.jpg" alt="">
                 <!-- Icon -->
                 <div class="insta-icon">
                     <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
@@ -384,7 +383,7 @@
 
             <!-- Single Insta Feeds -->
             <div class="single-insta-feeds">
-                <img src="img/bg-img/insta6.jpg" alt="">
+                <img src="/assets/img/bg-img/insta6.jpg" alt="">
                 <!-- Icon -->
                 <div class="insta-icon">
                     <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
@@ -393,7 +392,7 @@
 
             <!-- Single Insta Feeds -->
             <div class="single-insta-feeds">
-                <img src="img/bg-img/insta7.jpg" alt="">
+                <img src="/assets/img/bg-img/insta7.jpg" alt="">
                 <!-- Icon -->
                 <div class="insta-icon">
                     <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
@@ -410,7 +409,7 @@
                 <div class="col-12 h-100 d-flex flex-wrap align-items-center justify-content-between">
                     <!-- Footer Logo -->
                     <div class="footer-logo">
-                        <a href="index.html"><img src="img/core-img/logo.svg" alt=""></a>
+                        <a href="index.html"><img src="/assets/img/EnCuisine_logoFinal.svg" style="width: 100px" alt="En Cuisine Logo"></a>
                     </div>
                     <!-- Copywrite -->
                     <p>~En Cuisine~ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved </p>
@@ -422,18 +421,18 @@
 
     <!-- ##### All Javascript Files ##### -->
     <!-- jQuery-2.2.4 js -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="/assets/js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
-    <script src="js/bootstrap/popper.min.js"></script>
+    <script src="/assets/js/bootstrap/popper.min.js"></script>
     <!-- Bootstrap js -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="/assets/js/bootstrap/bootstrap.min.js"></script>
     <!-- All Plugins js -->
-    <script src="js/plugins/plugins.js"></script>
+    <script src="/assets/js/plugins/plugins.js"></script>
     <!-- Active js -->
-    <script src="js/active.js"></script>
+    <script src="/assets/js/active.js"></script>
     <!-- Google Maps -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwuyLRa1uKNtbgx6xAJVmWy-zADgegA2s"></script>
-    <script src="js/google-map/map-active.js"></script>
+    <script src="/assets/js/google-map/map-active.js"></script>
 
 
     
