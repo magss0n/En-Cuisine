@@ -11,10 +11,10 @@
     <!-- Title -->
     <title>~En Cuisine~</title>
     <!-- Favicon -->
-    <link rel="icon" href="../img/core-img/favicon.ico">
+    <link rel="icon" href="/assets/img/core-img/favicon.ico">
 
     <!-- Core Stylesheet -->
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <style>
         label{
             margin-top: 20px;
@@ -40,7 +40,7 @@
     <!-- Preloader -->
     <div id="preloader">
         <i class="circle-preloader"></i>
-        <img src="../img/core-img/salad.png" alt="">
+        <img src="/assets/img/core-img/salad.png" alt="">
     </div>
 
     <!-- Search Wrapper -->
@@ -103,7 +103,7 @@
                     <nav class="classy-navbar justify-content-between" id="deliciousNav">
 
                         <!-- Logo -->
-                        <a class="nav-brand" href="../main.html"><img src="#" alt=""></a>
+                        <a class="nav-brand" href=""><img src="/assets/img/EnCuisine_logoFinal.svg" alt=""></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -146,7 +146,7 @@
     <!-- ##### Header Area End ##### -->
 
     <!-- ##### Breadcumb Area Start ##### -->
-    <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(../img/bg-img/breadcumb4.jpg);">
+    <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(/assets/img/bg-img/breadcumb4.jpg);">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
@@ -173,9 +173,9 @@
             <div class="row">
                 <!-- Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
-                    <a href="../editRecipe.html">
+                    <a th:href="@{/editRecipe.html}">
                        <div class="single-best-receipe-area mb-30">
-                        <img src="../img/bg-img/r1.jpg" alt="">
+                        <img src="/assets/img/bg-img/r1.jpg" alt="">
                         <div class="receipe-content">
                             <a>
                                 <h5 style="font-size: 25px; font-weight: 900;">Sushi Easy Recipe</h5>
@@ -188,9 +188,9 @@
 
                 <!-- Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
-                    <a href="../editRecipe.html">
+                    <a th:href="@{/editRecipe}">
                       <div class="single-best-receipe-area mb-30">
-                        <img src="../img/bg-img/r2.jpg" alt="">
+                        <img src="/assets/img/bg-img/r2.jpg" alt="">
                         <div class="receipe-content">
                             <a>
                                 <h5 style="font-size: 25px; font-weight: 900;">Homemade Burger</h5>
@@ -203,10 +203,10 @@
 
                 <!-- Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
-                    <a href="../editRecipe.html">
+                    <a th:href="@{editRecipe}">
                     <div class="single-best-receipe-area mb-30">
                                             
-                    <img src="../img/bg-img/r3.jpg" alt="">
+                    <img src="/assets/img/bg-img/r3.jpg" alt="">
                     <div class="receipe-content">
                     <a>
                     <h5 style="font-size: 25px; font-weight: 900;">Vegan Smoothie</h5>

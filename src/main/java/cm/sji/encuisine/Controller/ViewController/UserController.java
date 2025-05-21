@@ -38,6 +38,9 @@ public class UserController {
     public String custom(Model model, Authentication authentication) {
         return "custom";
     }
-
+    @GetMapping("/recipeDetails")
+    public String recipeDetails(Model model, Authentication authentication) {
+        return "recipeDetails";
+    }
 
 }

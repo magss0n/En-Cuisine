@@ -19,6 +19,14 @@
         label{
             margin-top: 20px;
         }
+        .receipe-content{
+                     padding-bottom: 20px;
+                 }
+        .favs{
+            position: absolute;
+            left: 10px;
+            bottom: 90px;
+        }
     </style>
 
 </head>
@@ -158,123 +166,139 @@
                 </div>
             </div>
 
+
             <div class="row">
                 <!-- Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-best-receipe-area mb-30">
-                        <img src="/assets/img/bg-img/r1.jpg" alt="">
-                        <div class="receipe-content">
-                            <a th:href="@{/custom}">
-                                <h5 style="font-size: 25px; font-weight: 900;">Sushi Easy Recipe</h5>
-                            </a>
-                            <div class="ratings">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                    <a th:href="@{/recipeDetails}">
+                        <div class="single-best-receipe-area mb-30">
+<!--                            Favourites button-->
+                            <div class="favs">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="red" class="bi bi-heart" viewBox="0 0 16 16">
+                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                                </svg>
+                            </div>
+                            <img th:src="@{/assets/img/bg-img/r1.jpg}" alt="">
+                            <!-- favourites -->
+
+
+                            <div class="receipe-content">
+                                <a>
+                                    <h5 style="font-size: 25px; font-weight: 900;">Sushi Easy Recipe</h5>
+                                </a>
                             </div>
                         </div>
-                    </div>
+                    </a>
+
                 </div>
 
                 <!-- Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-best-receipe-area mb-30">
-                        <img src="/assets/img/bg-img/r2.jpg" alt="">
-                        <div class="receipe-content">
-                            <a th:href="@{/custom}">
-                                <h5 style="font-size: 25px; font-weight: 900;">Homemade Burger</h5>
-                            </a>
-                            <div class="ratings">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                    <a th:href="@{/recipeDetails}">
+                        <div class="single-best-receipe-area mb-30">
+<!--                            Favourites button-->
+                            <div class="favs">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="red" class="bi bi-heart" viewBox="0 0 16 16">
+                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                                </svg>
+                            </div>
+                            <img th:src="@{/assets/img/bg-img/r2.jpg}" alt="">
+                            <div class="receipe-content">
+                                <a>
+                                    <h5 style="font-size: 25px; font-weight: 900;">Homemade Burger</h5>
+                                </a>
+
                             </div>
                         </div>
-                    </div>
+                    </a>
+
                 </div>
 
                 <!-- Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-best-receipe-area mb-30">
-                        <img src="/assets/img/bg-img/r3.jpg" alt="">
-                        <div class="receipe-content">
-                            <a th:href="@{/custom}">
-                                <h5 style="font-size: 25px; font-weight: 900;">Vegan Smoothie</h5>
-                            </a>
-                            <div class="ratings">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                    <a th:href="@{/recipeDetails}">
+                        <div class="single-best-receipe-area mb-30">
+<!--                            Favourites button-->
+                            <div class="favs">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="red" class="bi bi-heart" viewBox="0 0 16 16">
+                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                                </svg>
+                            </div>
+                            <img th:src="@{/assets/img/bg-img/r3.jpg}" alt="">
+                            <div class="receipe-content">
+                                <a>
+                                    <h5 style="font-size: 25px; font-weight: 900;">Vegan Smoothie</h5>
+                                </a>
                             </div>
                         </div>
-                    </div>
+
+                    </a>
                 </div>
 
                 <!-- Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-best-receipe-area mb-30">
-                        <img src="/assets/img/bg-img/r4.jpg" alt="">
-                        <div class="receipe-content">
-                            <a th:href="@{/custom}">
-                                <h5 style="font-size: 25px; font-weight: 900;">Calabasa soup</h5>
-                            </a>
-                            <div class="ratings">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                    <a th:href="@{/recipeDetails}">
+                        <div class="single-best-receipe-area mb-30">
+<!--                            Favourites button-->
+                            <div class="favs">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="red" class="bi bi-heart" viewBox="0 0 16 16">
+                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                                </svg>
+                            </div>
+                            <img th:src="@{/assets/img/bg-img/r4.jpg}" alt="">
+                            <div class="receipe-content">
+                                <a>
+                                    <h5 style="font-size: 25px; font-weight: 900;">Calabasa soup</h5>
+                                </a>
                             </div>
                         </div>
-                    </div>
+
+                    </a>
                 </div>
 
                 <!-- Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-best-receipe-area mb-30">
-                        <img src="/assets/img/bg-img/r5.jpg" alt="">
-                        <div class="receipe-content">
-                            <a href="custom.html">
-                                <h5 style="font-size: 25px; font-weight: 900;">Homemade Breakfast</h5>
-                            </a>
-                            <div class="ratings">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                    <a th:href="@{/recipeDetails}">
+                        <div class="single-best-receipe-area mb-30">
+<!--                            Favourites button-->
+                            <div class="favs" style=">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="red" class="bi bi-heart" viewBox="0 0 16 16">
+                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                                </svg>
+                            </div>
+                            <img th:src="@{/assets/img/bg-img/r5.jpg}" alt="">
+                            <div class="receipe-content">
+                                <a>
+                                    <h5 style="font-size: 25px; font-weight: 900;">Homemade Breakfast</h5>
+                                </a>
                             </div>
                         </div>
-                    </div>
+
+                    </a>
                 </div>
-                
+
 
                 <!-- Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-best-receipe-area mb-30">
-                        <img src="/assets/img/bg-img/r6.jpg" alt="">
-                        <div class="receipe-content">
-                            <a href="custom.html">
-                                <h5 style="font-size: 25px; font-weight: 900;">Healthy Fruit Desert</h5>
-                            </a>
-                            <div class="ratings">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                    <a th:href="@{/recipeDetails}">
+                        <div class="single-best-receipe-area mb-30">
+                            <!--                        Favourites button-->
+                            <div class="favs">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="red" class="bi bi-heart" viewBox="0 0 16 16">
+                                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                                </svg>
+                            </div>
+                            <img th:src="@{/assets/img/bg-img/r6.jpg}" alt="">
+                            <div class="receipe-content">
+                                <a>
+                                    <h5 style="font-size: 25px; font-weight: 900;">Healthy Fruit Desert</h5>
+                                </a>
                             </div>
                         </div>
-                    </div>
+
+                    </a>
                 </div>
-            </div>
-        </div>
+            </div> </div>
     </section>
     <!-- ##### Best Receipe Area End ##### -->
 
@@ -293,7 +317,7 @@
       <div class="offcanvas-body">
         <div>
             <label>Cuisine</label>
-            <select name="" class="form-control" id="">
+            <select name="" class="form-control">
                 <option value="">African</option>
                 <option value="">French</option>
                 <option value="">Indegenous</option>
@@ -302,7 +326,7 @@
         <br><br>
          <div>
             <label>Difficulty</label>
-            <select name="" class="form-control" id="">
+            <select name="" class="form-control">
                 <option value="">Easy</option>
                 <option value="">Intermediate</option>
                 <option value="">Hard</option>
@@ -406,13 +430,9 @@
     <footer class="footer-area">
         <div class="container h-100">
             <div class="row h-100">
-                <div class="col-12 h-100 d-flex flex-wrap align-items-center justify-content-between">
-                    <!-- Footer Logo -->
-                    <div class="footer-logo">
-                        <a href="index.html"><img src="/assets/img/EnCuisine_logoFinal.svg" style="width: 100px" alt="En Cuisine Logo"></a>
-                    </div>
+                <div class="col-12 h-100 d-flex flex-wrap align-items-center">
                     <!-- Copywrite -->
-                    <p>~En Cuisine~ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved </p>
+                    <p >~En Cuisine~ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved </p>
                 </div>
             </div>
         </div>
