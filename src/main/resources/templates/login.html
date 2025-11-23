@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
@@ -14,12 +14,13 @@
             <img src="/assets/img/EnCuisine_logoFinal.svg" alt="EnCuisine_logo" style="width: 30%;">
             <form style="padding: 0;" th:action="@{/login}" method="post" class="form">
                 <h2 style="font-size: 2rem; text-align: center;" >Welcome back to En Cuisine</h2>
-                <p>Please, enter your credentials to login</p>
-                <div style="width: 100%;" class="form-group">
+                <p th:if="${message != null}" th:text="${message}">Please, enter your credentials to login</p>
+                <p th:unless="${message != null}">Please, enter your credentials to login</p>
+                <div style="width: 100%; margin-bottom: 1rem;" class="form-group my-3">
                     <label for="name">Name</label>
                     <input type="text" minlength="2" maxlength="50" id="name" name="username" required>
                 </div>
-                <div style="width: 100%; " class="form-group">
+                <div style="width: 100%; margin-bottom: 1rem;" class="form-group my-3">
                     <label for="pass">Password</label>
                     <input type="password" minlength="8" id="pass" name="password" required>
                 </div>

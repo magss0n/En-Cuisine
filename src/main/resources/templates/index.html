@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -21,10 +20,10 @@
 
 <body>
     <!-- Preloader -->
-    <div id="preloader">
-        <i class="circle-preloader"></i>
-        <img src="/assets/img/core-img/salad.png" alt="">
-    </div>
+<!--    <div id="preloader">-->
+<!--        <i class="circle-preloader"></i>-->
+<!--        <img src="/assets/img/core-img/salad.png" alt="">-->
+<!--    </div>-->
 
     <!-- Search Wrapper -->
     <div class="search-wrapper">
@@ -139,7 +138,7 @@
                             <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
                                 <h2 data-animation="fadeInUp" data-delay="300ms">Savor the Extraordinary</h2>
                                 <p data-animation="fadeInUp" data-delay="700ms">Discover recipes that transform everyday meals into culinary delights. From quick weeknight dinners to gourmet treats.</p>
-                                <a href="#" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">See Recipes</a>
+                                <a th:href="@{/main}" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">See Recipes</a>
                             </div>
                         </div>
                     </div>
@@ -154,7 +153,7 @@
                             <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
                                 <h2 data-animation="fadeInUp" data-delay="300ms">Cooking up Memories</h2>
                                 <p data-animation="fadeInUp" data-delay="700ms">Your go-to place for delicious, easy-to-follow recipes. Explore diverse recipes for every taste and occasion.</p>
-                                <a href="#" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">Browse</a>
+                                <a th:href="@{/main}" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">Browse</a>
                             </div>
                         </div>
                     </div>
@@ -169,7 +168,7 @@
                             <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
                                 <h2 data-animation="fadeInUp" data-delay="300ms">Bringing Taste to Life</h2>
                                 <p data-animation="fadeInUp" data-delay="700ms"> Simple recipes, big flavors, and cooking tips all in one place.Join a community passionate about food and flavor</p>
-                                <a href="#" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">Register Now</a>
+                                <a th:href="@{/signup}" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">Register Now</a>
                             </div>
                         </div>
                     </div>
@@ -192,32 +191,13 @@
 
             <div class="row">
                 <!-- Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
+                <a th:href="@{/recipeDetails/{recipeId}(recipeId=${recipe.id})}" th:each="recipe: ${recipes}" class="col-12 col-sm-6 col-lg-4">
                     <div class="single-best-receipe-area mb-30">
-                        <img src="/assets/img/bg-img/r1.jpg" alt="">
-                        <div class="receipe-content">
-                            <a href="custom.html">
-                                <h5 style="font-size: 25px; font-weight: 900;">Sushi Easy Recipe</h5>
-                            </a>
-                            <div class="ratings">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        <img th:unless="${recipe.imageUrl==null}" th:src="${recipe.imageUrl}" alt="Recipe Image">
+                        <img th:if="${recipe.imageUrl==null}" src="/assets/img/food1.webp" alt="Recipe Image">
 
-                <!-- Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-best-receipe-area mb-30">
-                        <img src="/assets/img/bg-img/r2.jpg" alt="">
-                        <div class="receipe-content">
-                            <a href="custom.html">
-                                <h5 style="font-size: 25px; font-weight: 900;">Homemade Burger</h5>
-                            </a>
+                        <div class="receipe-content px-3">
+                            <h5 style="font-size: 25px; font-weight: 900;" th:text="${recipe.name}">Sushi Easy Recipe</h5>
                             <div class="ratings">
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -227,83 +207,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <!-- Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-best-receipe-area mb-30">
-                        <img src="/assets/img/bg-img/r3.jpg" alt="">
-                        <div class="receipe-content">
-                            <a href="custom.html">
-                                <h5 style="font-size: 25px; font-weight: 900;">Vegan Smoothie</h5>
-                            </a>
-                            <div class="ratings">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-best-receipe-area mb-30">
-                        <img src="/assets/img/bg-img/r4.jpg" alt="">
-                        <div class="receipe-content">
-                            <a href="custom.html">
-                                <h5 style="font-size: 25px; font-weight: 900;">Calabasa soup</h5>
-                            </a>
-                            <div class="ratings">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-best-receipe-area mb-30">
-                        <img src="/assets/img/bg-img/r5.jpg" alt="">
-                        <div class="receipe-content">
-                            <a href="custom.html">
-                                <h5 style="font-size: 25px; font-weight: 900;">Homemade Breakfast</h5>
-                            </a>
-                            <div class="ratings">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-best-receipe-area mb-30">
-                        <img src="/assets/img/bg-img/r6.jpg" alt="">
-                        <div class="receipe-content">
-                            <a href="custom.html">
-                                <h5 style="font-size: 25px; font-weight: 900;">Healthy Fruit Desert</h5>
-                            </a>
-                            <div class="ratings">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -318,7 +223,7 @@
                     <div class="cta-content text-center">
                         <h2 style=" font-weight: 900;">Have Ingredients But Dont Know What To Cook?</h2>
                         <p style="font-size: 20px;">Our website offers a curated collection of delicious, easy-to-make recipes with clear instructions and beautiful photos. Whether you're a beginner or a seasoned cook, find inspiration for every meal, from quick snacks to festive dinners. Join us and turn cooking into a joyful adventure. <br>Start by entering the ingredients in your fridge</p>
-                        <a href="#" class="btn delicious-btn">Discover</a>
+                        <a th:href="@{/main}" class="btn delicious-btn">Discover</a>
                     </div>
                 </div>
             </div>
@@ -431,6 +336,36 @@
     <script src="/assets/js/plugins/plugins.js"></script>
     <!-- Active js -->
     <script src="/assets/js/active.js"></script>
+<!--    <script>-->
+<!--        async function fetchRecipes(){-->
+<!--            try{-->
+<!--                let response = await fetch("https://www.themealdb.com/api/json/v1/1/search.php?f=a")-->
+<!--                if (!response.ok){-->
+<!--                    throw new Error(`HTTP error! status: ${response.status}` )-->
+<!--                }-->
+<!--                const data = await response.json()-->
+<!--                console.log(data)-->
+
+<!--                // const params = new URLSearchParams()-->
+<!--                // params.append("meals", data)-->
+
+
+<!--                fetch(`/meals`,{-->
+<!--                    method: "POST",-->
+<!--                    headers: {-->
+<!--                        "Content-Type": "application/json",-->
+<!--                    },-->
+<!--                    body: data,-->
+<!--                }).then(response => {-->
+<!--                    response.text()-->
+<!--                }).then(data => alert(data))-->
+<!--                    .catch(error => alert("Error: " + error))-->
+<!--            } catch (error){-->
+<!--                console.error("Fetch error: " + error)-->
+<!--            }-->
+<!--        }-->
+<!--        fetchRecipes()-->
+<!--    </script>-->
 </body>
 
 </html>

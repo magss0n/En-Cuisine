@@ -1,7 +1,12 @@
 package cm.sji.encuisine.Controller.APIController;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import cm.sji.encuisine.Model.Entities.Meal;
+import cm.sji.encuisine.Model.Entities.MealDBResponse;
+import com.fasterxml.jackson.databind.util.JSONPObject;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class Hello {
@@ -11,5 +16,9 @@ public class Hello {
         return "Hello World";
     }
 
-
+    @PostMapping(value="/meals", consumes = "application/json")
+    public ResponseEntity<String> meals(@RequestBody MealDBResponse mealDBResponse) {
+        System.out.println(mealDBResponse);
+        return ResponseEntity.ok("ok!");
+    }
 }

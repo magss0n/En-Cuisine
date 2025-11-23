@@ -40,7 +40,6 @@ public class LoginController {
     @GetMapping("/signup")
     public String signUp(Model model) {
         model.addAttribute("newUser", new User());
-//        System.out.println(new User());
         return "signup";
     }
 
@@ -48,9 +47,9 @@ public class LoginController {
     public String createUser(@Validated @ModelAttribute User user, BindingResult result, Model model) {
         Boolean emailExists = personService.emailExists(user.getEmail());
 
-        if (personService.findByName(user.getName()) != null && emailExists) {
-           result.rejectValue("email", null, "This account already exists");
-           model.addAttribute("message", "This account already exists");
+        if (personService.findByName(user.getName()) != null || emailExists) {
+            result.rejectValue("email", null, "This account already exists");
+            model.addAttribute("message", "This account already exists");
         }
         if (result.hasErrors()) {
             model.addAttribute("newUser", user);
@@ -60,7 +59,8 @@ public class LoginController {
         personService.savePerson(user);
         System.out.println("User created");
         authenticateUser(user);
-        return "redirect:/user/home";
+        model.addAttribute("message", "Thanks for registering! Please enter your credentials");
+        return "login";
     }
 
     private void authenticateUser(User user) {
@@ -74,23 +74,5 @@ public class LoginController {
         SecurityContextHolder.getContext().setAuthentication(authenticationToken);
 //        System.out.println("Authenticated");
     }
-
-    @GetMapping("/")
-    public String home() {
-        return "index";
-    }
-
-    @GetMapping("/index")
-    public String index() {
-        return "index";
-    }
-
-//    @GetMapping("/home")
-//    public String homePage(Model model, Authentication authentication) {
-//        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-//        User user = (User) personService.findByName(userDetails.getUsername());
-//        model.addAttribute("user", user);
-//
-//        return "home";
-//    }
 }
+
